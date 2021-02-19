@@ -1,5 +1,7 @@
 package com.applanding.qna.Controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,9 +44,9 @@ public class CompanyController {
 	}
 	
 	@PostMapping("/delete")
-	public void deleteById()
+	public void deleteById(@RequestBody Map<String,Long> deleteMap)
 	{
-		companyService.delete(1l);
+		companyService.delete(deleteMap.get("id"));
 	}
 	
 	@PostMapping("/update")
