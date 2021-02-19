@@ -102,7 +102,6 @@ public class QuestionService {
 		if(!fqr.getTags().isEmpty())
 		{
 			questionTagFilter = test(fqr.getTags());
-			System.out.println(" LIST BRO "+questionTagFilter);
 		}
 		Long counter=1l;
 				
@@ -141,11 +140,9 @@ public class QuestionService {
 			{
 				if(questionTagFilter.contains(quest.getId()))
 				{
-					System.out.println("CONTRAIN BRU");
-				}
+			}
 				else {
 
-					System.out.println("DOESNT CONTRAIN BRU");
 					it.remove();
 					continue;
 				}
